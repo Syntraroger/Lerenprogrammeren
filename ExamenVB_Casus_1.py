@@ -1,3 +1,12 @@
+# Looptijden:
+# Geef het aantal deelnemers in.
+# Geef de looptijd in minuten in.
+# Sla alle tijden op in een lijst
+# Geef de 3 snelste tijden.
+# Geef de gemiddelde tijd.
+
+
+
 deelnemers = int(input('Geef het aantal deelnemers in: '))
 
 
