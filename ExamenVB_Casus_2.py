@@ -10,8 +10,6 @@
 # Vb Afdruk: Optie 1: x euro in totaal.
 
 
-
-
 prijsa=55
 prijsb=70
 prijsc=80
@@ -32,35 +30,35 @@ def tot(auto, dagen, km, allin):
 
     if auto.lower() == 'a':
         totaal = dagen * prijsa
-        if allin == 'ja':
-            totaal += (km-100-gratisAB) * kmprijs
+        if allin == 'ja' :
+            totaal += (km-100) * kmprijs + (dagen*verzAB)
         else:
             totaal += (km-gratisAB) * kmprijs
         return totaal
     elif auto.lower() == 'b':
         totaal = dagen * prijsb
         if allin == 'ja':
-            totaal += (km - 100 - gratisAB) * kmprijs
+            totaal += (km - 100) * kmprijs + (dagen*verzAB)
         else:
             totaal += (km - gratisAB) * kmprijs
         return totaal
     elif auto.lower() == 'c':
         totaal = dagen * prijsc
         if allin == 'ja':
-            totaal += (km - 100 - gratisCD) * kmprijs
+            totaal += (km - 100 - gratisCD) * kmprijs + (dagen*verzCD)
         else:
             totaal += (km - gratisCD) * kmprijs
         return totaal
     elif auto.lower() == 'd':
         totaal = dagen * prijsd
         if allin == 'ja':
-            totaal += (km - 100 - gratisCD) * kmprijs
+            totaal += (km - 100 - gratisCD) * kmprijs + (dagen*verzCD)
         else:
             totaal += (km - gratisCD) * kmprijs
         return totaal
 
 
-for a in range(3):
+for a in range(1):
     sel = input('A:Ford Fiesta, B:Ford Focus, C:Ford Puma, D:Ford Kuga: ')
     aantaldagen = int(input('Hoeveel dagen wilt u de auto huren: '))
     aantalkm = int(input('Hoeveel km verwacht u nodig te hebben: '))
@@ -70,27 +68,11 @@ for a in range(3):
 
 
 
-for b in range(3):
+for b in range(1):
     print(f'Optie {b+1}: ', lijst[b], 'euro in totaal')
 
 
 
 
-# if sel.lower() == 'a' and Allin.lower()=='ja':
-    #         lijst.append(tot(sel, aantaldagen, aantalkm, Allin))
-    # elif sel.lower() == 'a' and Allin.lower()=='nee':
-    #         lijst.append(tot(sel, aantaldagen, aantalkm, Allin))
-    # elif sel.lower() == 'b' and Allin.lower()=='ja':
-    #         lijst.append(tot(sel, aantaldagen, aantalkm, Allin))
-    # elif sel.lower() == 'b' and Allin.lower()=='nee':
-    #         lijst.append(tot(sel, aantaldagen, aantalkm, Allin))
-    # elif sel.lower() == 'c' and Allin.lower()=='ja':
-    #         lijst.append(tot(sel, aantaldagen, aantalkm, Allin))
-    # elif sel.lower() == 'c' and Allin.lower()=='nee':
-    #         lijst.append(tot(sel, aantaldagen, aantalkm, Allin))
-    # elif sel.lower() == 'd' and Allin.lower()=='ja':
-    #         lijst.append(tot(sel, aantaldagen, aantalkm, Allin))
-    # elif sel.lower() == 'd' and Allin.lower()=='nee':
-    #         lijst.append(tot(sel, aantaldagen, aantalkm, Allin))
 
 
